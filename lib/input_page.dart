@@ -1,8 +1,10 @@
-import 'icon_content.dart';
-import 'reusable_card.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'constants.dart';
+import 'icon_content.dart';
+import 'reusable_card.dart';
+import 'switcher.dart';
 
 enum Gender {
   male,
@@ -108,11 +110,19 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     color: kActiveCardColor,
+                    cardChild: Switcher(
+                      label: 'WEIGHT',
+                      value: 74,
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     color: kActiveCardColor,
+                    cardChild: Switcher(
+                      label: 'AGE',
+                      value: 19,
+                    ),
                   ),
                 ),
               ],
@@ -123,6 +133,14 @@ class _InputPageState extends State<InputPage> {
             margin: EdgeInsets.only(top: 10.0),
             height: kBottomContainerHeight,
             width: double.infinity,
+            child: Center(
+                child: Text(
+              'Calculate your bmi'.toUpperCase(),
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.w600,
+              ),
+            )),
           )
         ],
       ),

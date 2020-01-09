@@ -1,6 +1,6 @@
 # BMI Calculator 💪
 
-![View](images/capture.PNG)
+![View](images/capture2.png)
 
 #### k convention
 константы должны начинаться с буквы k.
